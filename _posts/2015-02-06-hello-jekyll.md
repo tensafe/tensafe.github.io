@@ -3,7 +3,7 @@ layout: post
 title: "Hello Jekyll"
 description: ""
 category: 
-tags: [잡담]
+tags: [jekyll]
 ---
 {% include JB/setup %}
 
