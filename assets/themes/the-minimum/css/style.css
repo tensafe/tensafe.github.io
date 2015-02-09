@@ -198,9 +198,11 @@ pre {
 }
 pre {
   color: #f2f2f2;
-  background-color: #393939;
-  border: 1px solid #393939;
+  background-color: #202020;
+  border: 1px solid #202020;
   font-family: "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 18px;
   margin-left: 0;
   margin-right: 0;
   padding: 1.625em;
@@ -229,7 +231,6 @@ pre {
 /* MAIN
 --------------------------------------------------------------------------------- */
 .unit-article header {
-  background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
   background-repeat: repeat;
   background-position: 0 0;
   background-color: #BADA55;
@@ -402,7 +403,7 @@ pre {
   text-transform: capitalize;
 }
 .unit-article .unit-foot {
-  background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png') repeat 0 0 #4d4d4d;
+  background-color: #666;
   color: #fafafa;
   padding-top: 1.625em;
   padding-bottom: 1.625em;
