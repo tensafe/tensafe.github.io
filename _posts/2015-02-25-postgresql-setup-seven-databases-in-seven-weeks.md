@@ -23,5 +23,5 @@ $ sudo -u postgres psql book
 postgres=# CREATE EXTENSION cube;
 postgres=# \q
 
-psql book -c "SELECT '1'::cube;"
+$ psql book -c "SELECT '1'::cube;"
 {% endhighlight %}
