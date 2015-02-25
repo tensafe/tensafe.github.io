@@ -7,7 +7,7 @@ tags: [c++]
 ---
 {% include JB/setup %}
 
-After doing [this](/2015/02/using-variadic-templates-with-different-parameter-types.html), I started working on this code.
+After [this](/2015/02/using-variadic-templates-with-different-parameter-types.html), I started working on this code.
 {% highlight cpp %}
 template <class R>
 void function0_impl(sqlite3_context* ctx, int nargs, sqlite3_value** values)
@@ -37,8 +37,7 @@ void function5_impl(sqlite3_context* ctx, int nargs, sqlite3_value** values)
 }
 {% endhighlight %}
 
-It was harder because I had to find the solition to call a method per param using index.
-
+It was much harder since it had to be able to call a method per parameter using index.
 {% highlight cpp %}
   (*f)(c.context::get<P1>(0),
      c.context::get<P2>(1),
@@ -72,12 +71,12 @@ static inline std::tuple<> to_tuple_impl(int index, const context& c, std::tuple
 }
 {% endhighlight %}
 
-This is not the most efficient code that can do this but the cleanest one that I could come up with. You might be able to get some performance boost to pass the tuple as out param.
+This is not the most efficient code that can do this but the cleanest one that I could write. Frankly, in modern C++, I'm not sure if I'm helping compiler optimize the code or doing opposite.
 
 
 #### Call the function using the tuple
 
-I found a solution for this by googling.
+I found the solution for this by googling.
 
 {% highlight cpp %}
 template<size_t N>
@@ -115,9 +114,9 @@ inline auto apply(F&& f, T&& t)
 }
 {% endhighlight %}
 
-See details in <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3915.pdf> and <http://stackoverflow.com/a/12650100>. The second link has the version for C++14 too.
+Nice code, isn't it? See details in <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3915.pdf> and <http://stackoverflow.com/a/12650100>. The second link has the version for C++14 too.
 
-#### Solution
+#### Final code
 
 {% highlight cpp %}
 template <class R, class... Ps>

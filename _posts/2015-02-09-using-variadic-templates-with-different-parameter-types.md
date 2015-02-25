@@ -35,7 +35,7 @@ boost::tuple<T1, T2, T3, T4, T5, T6, T7, T8> get_columns(int idx1, int idx2, int
 Since then, I started using Java at work, and recently I found that C++11 introduced the variadic templates. I had to give it a try.
 A friend introduced me [this video](http://channel9.msdn.com/Events/GoingNative/GoingNative-2012/Variadic-Templates-are-Funadic) and it helped me a lot.
 
-This was my try and had some difficulties with coming up with ?? part. (You might already notice that *boost::* namespaces changed to *std::* for tuple and make_tuple.)
+The following was my try and had some difficulties with coming up with ?? part. (You might already notice that *boost::* namespaces were changed to *std::* for *tuple* and *make_tuple*.)
 {% highlight cpp %}
 template <class... Ts>
 std::tuple<Ts...> get_columns(??... idxs) const {
@@ -43,7 +43,7 @@ std::tuple<Ts...> get_columns(??... idxs) const {
 }
 {% endhighlight %}
 
-The same friend gave me a simple trick for this too, which is nice and clean.
+The friend gave me a simple trick for this too, which I liked a lot. The final updated code is this.
 {% highlight cpp %}
 template <class T>
 struct convert {
@@ -56,7 +56,7 @@ std::tuple<Ts...> get_columns(typename convert<Ts>::to_int... idxs) const {
 }
 {% endhighlight %}
 
-A nice thing of using this trick is that we can extend this to map the template parameter types to types whatever we want by using template specializations for *convert*. For example,
+A nice thing of using this trick is that you can extend this to map the template parameter types to types whatever we want by using template specializations for *convert*. For example,
 {% highlight cpp %}
 template <class T>
 struct convert;
