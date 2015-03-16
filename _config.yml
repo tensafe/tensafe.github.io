@@ -8,13 +8,12 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : IdeA thinKING
-tagline: Site Tagline
+title : TenSafe-zhnids(tensafe.com)
+tagline: zhnids,tensafe,tsrem
 author :
-  name : Wongoo Lee
-  email : iwongu@gmail.com
-  github : iwongu
-  twitter : iwongu
+#  name : Wongoo Lee
+#  email : iwongu@gmail.com
+  github : tensafe
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -24,7 +23,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://ideathinking.com
+production_url : http://tensafe.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -81,7 +80,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : iwongu
+      short_name : zhnids
     livefyre :
       site_id : 123
     intensedebate :
