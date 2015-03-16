@@ -1,7 +1,7 @@
 ---
 layout: page
-title : Home
-header : Home
+title : TenSafe-zhnids(tensafe.com)
+header : zhnids
 group: navigation
 ---
 {% include JB/setup %}

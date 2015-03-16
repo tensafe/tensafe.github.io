@@ -8,12 +8,12 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : TenSafe-zhnids(tensafe.com)
+title : TenSafe
 tagline: zhnids,tensafe,tsrem
 author :
 #  name : Wongoo Lee
 #  email : iwongu@gmail.com
-  github : tensafe
+#  github : tensafe
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
