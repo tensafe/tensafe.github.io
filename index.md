@@ -1,6 +1,6 @@
 ---
 layout: page
-title : TenSafe-zhnids(tensafe.com)
+title : TenSafe
 header : zhnids
 group: navigation
 ---
